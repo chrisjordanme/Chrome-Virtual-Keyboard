@@ -499,13 +499,13 @@ function virtualKeyboardChromeExtension_inputTypesRender() {
 		document.getElementById("virtualKeyboardChromeExtensionMainKbd").style.display =  "";
 		virtualKeyboardChromeClassStyleDisplay("kbEmailInput", "none");
 	} else {
-		document.getElementById("virtualKeyboardChromeExtensionNumberBarKbdInput").style.display =  "none";
-		document.getElementById("virtualKeyboardChromeExtensionMainKbd").style.display =  "";
-		document.getElementById("virtualKeyboardChromeExtensionMainNumbers").style.display =  "none";
+		window.parent.document.getElementById("virtualKeyboardChromeExtensionNumberBarKbdInput").style.display =  "none";
+		window.parent.document.getElementById("virtualKeyboardChromeExtensionMainKbd").style.display =  "";
+		window.parent.document.getElementById("virtualKeyboardChromeExtensionMainNumbers").style.display =  "none";
 		virtualKeyboardChromeClassStyleDisplay("kbEmailInput", "none");
 		if ((virtualKeyboardChromeExtensionClickedElem.getAttribute("_originalType") == "number") || (virtualKeyboardChromeExtensionClickedElem.getAttribute("_originalType") == "tel")) {
-			document.getElementById("virtualKeyboardChromeExtensionNumberBarKbdInput").style.display =  "";
-			document.getElementById("virtualKeyboardChromeExtensionMainKbd").style.display =  "none";
+			window.parent.document.getElementById("virtualKeyboardChromeExtensionNumberBarKbdInput").style.display =  "";
+			window.parent.document.getElementById("virtualKeyboardChromeExtensionMainKbd").style.display =  "none";
 		} else if (virtualKeyboardChromeExtensionClickedElem.getAttribute("_originalType") == "email") {
 			virtualKeyboardChromeClassStyleDisplay("kbEmailInput", "");
 		}
